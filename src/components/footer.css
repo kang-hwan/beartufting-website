@@ -1,0 +1,14 @@
+.footer-container {
+    text-align: center;
+    width: 100vw;
+    height: 100px;
+    background-color: lightgray;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    margin-top: 35px;
+}

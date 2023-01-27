@@ -1,0 +1,5 @@
+.home-carousel img {
+    height: 350px;
+    object-fit: cover;
+    filter: brightness(70%);
+}
