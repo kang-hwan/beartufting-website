@@ -5,7 +5,7 @@ import './footer.css';
 export default function Footer() {
     return(
         <div className='footer-container'>
-            <div className='copyright'>© All copyrights are reserved by Bear Tufting</div>
+            <div className='copyright'>© 2023 BearTufting. All rights reserved.</div>
         </div>
     )
 }

@@ -11,3 +11,25 @@
     font-size: 18px;
     margin-top: 10px;
 }
+
+h1 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form-container {
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px 20px 30px 20px;
+    background-color: white;
+}
+
+h3 {
+    margin-left: 10px;
+    font-weight: bold;
+    display: inline;
+    position: relative;
+    top: 5px;
+}
