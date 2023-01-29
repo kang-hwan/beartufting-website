@@ -13,9 +13,12 @@ export default function BookingForm() {
         <div className='form-container'>
             <div className='booking-step1'>
                 <LooksOneSharpIcon fontSize='large' style={{marginLeft: '5px'}}/><h3>Booking</h3>
-                <DatePickerAPI /><SessionPicker />
-                
+                <div className='booking-step1-inputs' style={{display: 'flex',}}>
+                    <DatePickerAPI />
+                    <SessionPicker />
+                </div>
             </div>
+
             <div className='booking-step2'>
                 <LooksTwoSharpIcon fontSize='large' style={{marginLeft: '5px'}} /><h3>Your Details</h3>
                 <Box
@@ -33,7 +36,7 @@ export default function BookingForm() {
                     </Box>
                     What is your preferred contact method? Mobile Email
             </div>
-            <Stack spacing={3} direction="row">
+            <Stack spacing={3} direction="row" style={{marginTop: '10px'}}>
                 <Button variant="contained">To Payment</Button>
             </Stack>
         </div>
