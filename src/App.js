@@ -18,8 +18,12 @@ function App() {
         <Route path='/booking' element={<Booking />} />
         <Route path='/orders' element={<Orders />} />
         <Route path='/faq' element={<FAQ />} />
+
+        <Route path='/checkout' element={<CheckoutLayout />}>
+          <Route index element={<PersonalDetails />}></Route>  
+          <Route path='step-2' element={<Address />}></Route>  
+        </Route> 
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }
