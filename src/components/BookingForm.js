@@ -5,17 +5,39 @@ import TextField from '@mui/material/TextField';
 import LooksOneSharpIcon from '@mui/icons-material/LooksOneSharp';
 import LooksTwoSharpIcon from '@mui/icons-material/LooksTwoSharp';
 import DatePickerAPI from './DatePicker';
+import dayjs from 'dayjs';
 import SessionPicker from './SessionPicker';
 
 
 export default function BookingForm() {
+    const [value, setValue] = React.useState(dayjs(new Date()));
+    const [age, setAge] = React.useState('');
+
+
+    const submit = (e) => {
+        e.preventDefault();
+
+        // collect all the state variables
+        console.log('Validating value: ', value);
+        console.log('Validating Age: ', age);
+        
+        // submit to an api
+        
+        console.log('submitting value: ', value);
+        console.log('submitting Age: ', age);
+
+        // navigate to the next page
+
+        console.log('navigate to next page');
+    }
+    
     return(
-        <div className='form-container'>
+        <form className='form-container' onSubmit={(e) => submit(e)}>
             <div className='booking-step1'>
                 <LooksOneSharpIcon fontSize='large' style={{marginLeft: '5px'}}/><h3>Booking</h3>
                 <div className='booking-step1-inputs' style={{display: 'flex',}}>
-                    <DatePickerAPI />
-                    <SessionPicker />
+                    <DatePickerAPI value={value} setValue={setValue} />
+                    <SessionPicker age={age} setAge={setAge} />
                 </div>
             </div>
 
@@ -37,8 +59,8 @@ export default function BookingForm() {
                     What is your preferred contact method? Mobile Email
             </div>
             <Stack spacing={3} direction="row" style={{marginTop: '10px'}}>
-                <Button variant="contained">To Payment</Button>
+                <Button type='submit' variant="contained">To Payment</Button>
             </Stack>
-        </div>
+        </form>
     )
 }
