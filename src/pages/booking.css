@@ -22,14 +22,8 @@ h1 {
     margin: 0 auto;
     border: 1px solid lightgray;
     border-radius: 10px;
-    padding: 20px 20px 30px 20px;
+    padding: 40px;
     background-color: white;
 }
 
-h3 {
-    margin-left: 10px;
-    font-weight: bold;
-    display: inline;
-    position: relative;
-    top: 5px;
-}
+
