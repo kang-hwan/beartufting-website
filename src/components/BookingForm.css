@@ -11,7 +11,7 @@ h5 {
   color: white;
   font-weight: bold;
   width: 30px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
 }
 
 .btn-increment {
@@ -20,7 +20,7 @@ h5 {
   color: white;
   font-weight: bold;
   width: 30px;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
 }
 
 .class-stack {
@@ -30,6 +30,7 @@ h5 {
   width: 500px;
   display: flex;
   justify-content: space-around;
+  border-bottom: 1px solid rgb(118, 118, 118);
 }
 
 .addOn-stack {
@@ -39,6 +40,7 @@ h5 {
   width: 500px;
   display: flex;
   justify-content: space-around;
+  border-bottom: 1px solid rgb(118, 118, 118);
 }
 
 .class-title {
