@@ -21,7 +21,7 @@ export default function BookingForm() {
       body: JSON.stringify({
         id: uuidv4(),
         submitTime: new Date(),
-        name: "test",
+        name: fullName,
         mobile: "test",
         email: "",
         tufting: tfCount,
@@ -38,6 +38,8 @@ export default function BookingForm() {
     const data = await response.json();
     console.log("data: ", data);
   };
+
+  const [fullName, setFullName] = useState("");
 
   // ! Counters
   // Tufting Class
@@ -123,6 +125,7 @@ export default function BookingForm() {
               variant="filled"
               size="normal"
               style={{ flex: "2" }}
+              onChange={(e) => setFullName(e.target.value)}
               required
             />
             <TextField
@@ -157,7 +160,11 @@ export default function BookingForm() {
           <Stack direction="row" spacing={3} className="class-stack">
             <h5 className="class-title">Tufting</h5>
             <div style={{ display: "flex" }}>
-              <button className="btn-decrement" onClick={decrementTf}>
+              <button
+                type="button"
+                className="btn-decrement"
+                onClick={decrementTf}
+              >
                 -
               </button>
               <h5
@@ -165,7 +172,11 @@ export default function BookingForm() {
               >
                 {tfCount}
               </h5>
-              <button className="btn-increment" onClick={incrementTf}>
+              <button
+                type="button"
+                className="btn-increment"
+                onClick={incrementTf}
+              >
                 +
               </button>
             </div>
@@ -174,7 +185,11 @@ export default function BookingForm() {
           <Stack direction="row" spacing={3} className="class-stack">
             <h5 className="class-title">Punch Needle</h5>
             <div style={{ display: "flex" }}>
-              <button className="btn-decrement" onClick={decrementPn}>
+              <button
+                type="button"
+                className="btn-decrement"
+                onClick={decrementPn}
+              >
                 -
               </button>
               <h5
@@ -182,7 +197,11 @@ export default function BookingForm() {
               >
                 {pnCount}
               </h5>
-              <button className="btn-increment" onClick={incrementPn}>
+              <button
+                type="button"
+                className="btn-increment"
+                onClick={incrementPn}
+              >
                 +
               </button>
             </div>
@@ -191,7 +210,11 @@ export default function BookingForm() {
           <Stack direction="row" spacing={3} className="class-stack">
             <h5 className="class-title">Fluid Art</h5>
             <div style={{ display: "flex" }}>
-              <button className="btn-decrement" onClick={decrementFa}>
+              <button
+                type="button"
+                className="btn-decrement"
+                onClick={decrementFa}
+              >
                 -
               </button>
               <h5
@@ -199,7 +222,11 @@ export default function BookingForm() {
               >
                 {faCount}
               </h5>
-              <button className="btn-increment" onClick={incrementFa}>
+              <button
+                type="button"
+                className="btn-increment"
+                onClick={incrementFa}
+              >
                 +
               </button>
             </div>
@@ -218,7 +245,11 @@ export default function BookingForm() {
           <Stack direction="row" spacing={3} className="addOn-stack">
             <h5 className="class-title">Image Illustration</h5>
             <div style={{ display: "flex" }}>
-              <button className="btn-decrement" onClick={decrementIl}>
+              <button
+                type="button"
+                className="btn-decrement"
+                onClick={decrementIl}
+              >
                 -
               </button>
               <h5
@@ -226,7 +257,11 @@ export default function BookingForm() {
               >
                 {ilCount}
               </h5>
-              <button className="btn-increment" onClick={incrementIl}>
+              <button
+                type="button"
+                className="btn-increment"
+                onClick={incrementIl}
+              >
                 +
               </button>
             </div>
@@ -235,7 +270,11 @@ export default function BookingForm() {
           <Stack direction="row" spacing={3} className="addOn-stack">
             <h5 className="class-title">Creative Kids Voucher</h5>
             <div style={{ display: "flex" }}>
-              <button className="btn-decrement" onClick={decrementKv}>
+              <button
+                type="button"
+                className="btn-decrement"
+                onClick={decrementKv}
+              >
                 -
               </button>
               <h5
@@ -243,7 +282,11 @@ export default function BookingForm() {
               >
                 {kvCount}
               </h5>
-              <button className="btn-increment" onClick={incrementKv}>
+              <button
+                type="button"
+                className="btn-increment"
+                onClick={incrementKv}
+              >
                 +
               </button>
             </div>
