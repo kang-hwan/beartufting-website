@@ -5,6 +5,7 @@ import TextField from "@mui/material/TextField";
 import { v4 as uuidv4 } from "uuid";
 import "./BookingForm.css";
 import { width } from "@mui/system";
+import { format } from "date-fns";
 
 export default function BookingForm() {
   // ! POST request
@@ -20,10 +21,10 @@ export default function BookingForm() {
       },
       body: JSON.stringify({
         id: uuidv4(),
-        submitTime: new Date(),
+        submitTime: format(new Date(), "yyyy-MM-dd, kk-mm"),
         name: fullName,
-        mobile: "test",
-        email: "",
+        mobile: mobile,
+        email: email,
         tufting: tfCount,
         punchNeedle: pnCount,
         fluidArt: faCount,
@@ -31,7 +32,7 @@ export default function BookingForm() {
         kidsVoucher: kvCount,
         totalAttend: totalAttend,
         totalDeposit: totalDeposit,
-        message: "",
+        message: message,
       }),
     });
 
@@ -40,6 +41,9 @@ export default function BookingForm() {
   };
 
   const [fullName, setFullName] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   // ! Counters
   // Tufting Class
@@ -134,6 +138,7 @@ export default function BookingForm() {
               variant="filled"
               size="normal"
               style={{ flex: "2" }}
+              onChange={(e) => setMobile(e.target.value)}
               required
             />
             <TextField
@@ -142,6 +147,7 @@ export default function BookingForm() {
               variant="filled"
               size="normal"
               style={{ flex: "3" }}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </Stack>
@@ -299,9 +305,10 @@ export default function BookingForm() {
             id="filled-multiline-static"
             label="Message"
             multiline
-            rows={10}
+            rows={5}
             defaultValue=""
             variant="filled"
+            onChange={(e) => setMessage(e.target.value)}
             fullWidth
           />
         </Box>
