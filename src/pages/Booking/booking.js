@@ -1,6 +1,6 @@
 import React from "react";
 import "./booking.css";
-import BookingForm from "../components/BookingForm";
+import BookingForm from "../../components/BookingForm/BookingForm";
 
 function Booking() {
   return (

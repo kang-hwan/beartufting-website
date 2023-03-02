@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import Logo from "../images/logos/logo-paw-cropped.png";
+import Logo from "../../images/logos/logo-paw-cropped.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Header() {

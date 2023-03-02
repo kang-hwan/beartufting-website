@@ -6,11 +6,11 @@ import "./order.css";
 function Orders() {
   return (
     <div className="order-container">
-      <h1>Custom Order Coming Soon!</h1>
-      <h3>
+      <h1>Custom Orders Coming Soon!</h1>
+      <h4>
         We are preparing for custom orders for people who wants to get custom
-        designed rugs!{" "}
-      </h3>
+        designed rugs!
+      </h4>
     </div>
   );
 }
