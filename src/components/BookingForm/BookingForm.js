@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { v4 as uuidv4 } from "uuid";
 import "./BookingForm.css";
-import { width } from "@mui/system";
 import { format } from "date-fns";
 
 export default function BookingForm() {
