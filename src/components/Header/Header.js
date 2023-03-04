@@ -27,6 +27,7 @@ function Header() {
           className="instagram-link"
           href="https://www.instagram.com/bear.tufting/"
           target="_blank"
+          rel="noreferrer"
         >
           <InstagramIcon /> Instagram
         </a>
